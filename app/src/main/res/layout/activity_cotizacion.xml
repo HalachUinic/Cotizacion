@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#615656"
+    tools:context=".Cotizacion_Activity">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:id="@+id/lblNombre"
+        app:layout_constraintBottom_toTopOf="@id/lblFolio"
+        >
+
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Folio"
+        android:id="@+id/lblFolio"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombre"
+        android:textSize="20dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Automovil"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/txtDescricion"
+        app:layout_constraintTop_toBottomOf="@id/lblFolio"
+
+        tools:ignore="MissingConstraints">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Precio Automovil"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/txtValorAuto"
+        app:layout_constraintTop_toBottomOf="@id/txtDescricion"
+        tools:ignore="MissingConstraints"></EditText>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Porcentaje Enganche"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:id="@+id/txtPorcentaje"
+        app:layout_constraintTop_toBottomOf="@id/txtValorAuto"
+        tools:ignore="MissingConstraints"></EditText>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/txtPorcentaje"
+        tools:ignore="MissingConstraints">
+
+        <!-- Agrega tus radio buttons dentro del RadioGroup -->
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Meses" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18 Meses" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb3"
+            android:text="24 Meses"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb4"
+            android:text="36 Meses"></RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/lblPagoM"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:textSize="20dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/lblPagoI"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblPagoM"
+        android:textSize="20dp"
+        ></TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cotizar"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblPagoI"
+        android:id="@+id/btnCotizar"
+        >
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limpiar"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnCotizar"
+        android:id="@+id/btnLimpiar"
+        >
+
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar"
+        android:id="@+id/btnRegresar"
+        ></Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
